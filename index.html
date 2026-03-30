@@ -3,18 +3,52 @@
   <head>
 
 <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@2.1.1/dist/aframe-extras.min.js"></script>
-    
+
   </head>
     <body>
     <a-scene>
-      <a-sky color="lightblue"></a-sky>
+      <a-sky color="#87CEEB "></a-sky>
       
-       <!-- Put this inside the <a-scene> -->
+      
       <a-entity 
-      ply-model="src:dog.ply"
-      position="0 1 -2"
-      rotation="-90 0 90"
+      ply-model="src:SkyIsland-Zelda2.ply"
+      position="0 -15 0"
+      rotation="-90 0 0"
+      ></a-entity>
+      <a-entity
+      ply-model="src:BIRD.ply"
+      position="8 -6 -4.5"
+      rotation="-90 0 0"
+      animation__first="
+      property: position;
+      from: 8 -6 -4.5;
+      to: -5 -6 -4.5;
+      dur: 2000;
+      loop: false;
+      easing: linear;
+      dir: normal
+      startEvents: loaded, animationcomplete__third"
+      animation__second="
+      property: rotation;
+      from: -90 0 0;
+      to: -90 180 0;
+      dur: 2000;
+      loop: false;
+      dir: normal;
+      startEvents: loaded, animationcomplete__first"
+      animation__third="
+      property: position;
+      from: -5 -6 -4.5;
+      to: 9 -6 -4.5;
+      dur: 2000;
+      loop: false;
+      dir: normal;
+      startEvents: loaded, animationcomplete__second"
+
+      
+      
       ></a-entity>
                  
     </a-scene>
