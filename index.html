@@ -23,29 +23,40 @@
       rotation="-90 0 0"
       animation__first="
       property: position;
-      from: 8 -6 -4.5;
+      from: 9 -6 -3;
       to: -5 -6 -4.5;
       dur: 2000;
       loop: false;
       easing: linear;
       dir: normal;
-      startEvents: loaded, animationcomplete__third"
+      startEvents: loaded, animationcomplete__fourth"
       animation__second="
       property: rotation;
       from: -90 0 0;
       to: -90 180 0;
       dur: 2000;
       loop: false;
+      easing: linear;
       dir: normal;
       startEvents: animationcomplete__first"
       animation__third="
       property: position;
       from: -5 -6 -4.5;
-      to: 9 -6 -4.5;
+      to: 9 -6 -3;
       dur: 2000;
       loop: false;
+      easing: linear;
       dir: normal;
       startEvents: animationcomplete__second"
+      animation__fourth="
+      property: rotation;
+      from: -90 -180 0;
+      to: -90 0 0;
+      dur: 2000;
+      loop: false;
+      easing: linear;
+      dir: normal;
+      startEvents: animationcomplete__third"
 
       
       
